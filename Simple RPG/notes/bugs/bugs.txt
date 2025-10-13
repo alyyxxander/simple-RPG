@@ -1,0 +1,5 @@
+
+
+if player runs upwards against a wall, stops, and then runs up again, the player is pushed up by one more pixel for some reason
+
+
