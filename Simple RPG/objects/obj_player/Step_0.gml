@@ -7,8 +7,32 @@ var _hinput = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _vinput = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
 
+var _xmove = _hinput * move_speed;
+var _ymove = _vinput * move_speed;
+
+
+
+#region Nudge adjustment to prevent getting stuck
+// --- Nudge adjustment to prevent getting stuck (Before movement) ---
+
+// We use place_meeting() to check for collision at the current position (x, y).
+// The third argument is the Tilemap ID, which is a valid target for place_meeting.
+//if (place_meeting(x, y, tilemap)) {
+    // The instance is currently stuck *inside* the tilemap collision boundary.
+    
+    // Nudge ONLY if the player is NOT trying to move down, 
+    // which prevents the push from interfering with downward movement.
+//    if (_vinput >= 0) {
+        // Move the player's position down by 1 pixel to pull them out of the collision
+//        y += 1; 
+//    }
+//}
+#endregion
+
+
+
 //movement and collision all in one function!! =D
-move_and_collide(_hinput*move_speed, _vinput*move_speed, tilemap);
+move_and_collide(_xmove, _ymove, tilemap, undefined, undefined, undefined, move_speed, move_speed);
 
 
 

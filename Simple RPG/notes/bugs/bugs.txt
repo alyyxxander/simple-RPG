@@ -1,5 +1,8 @@
 
 
-if player runs upwards against a wall, stops, and then runs up again, the player is pushed up by one more pixel for some reason
+ if the player runs upwards against a wall, stops, and then runs up again, 
+the player is pushed up by one more pixel for some reason. since they were 
+pushed up by a pixel, they are now colliding with the wall and cannot move 
+left or right. moving  down first resolves this
 
-
+ehhhh kinda fixed 
