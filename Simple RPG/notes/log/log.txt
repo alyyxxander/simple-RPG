@@ -1,2 +1,5 @@
-10/12/25: started 1st video
+10/12/25: started 1st video: Movement & Enemies
 10/13/25: completed 1st video
+10/14/25: started 2nd video: Real-Time Combat
+10/16/25: did a few more minutes of 2nd video
+10/17/25: finished 2nd video

@@ -6,7 +6,6 @@ var _hinput = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 //this = 1 when S is pressed, and -1 when W is pressed
 var _vinput = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
-
 var _xmove = _hinput * move_speed;
 var _ymove = _vinput * move_speed;
 
@@ -42,6 +41,9 @@ if (_hinput != 0 || _vinput != 0) {
     else if (_vinput < 0) sprite_index = spr_player_walk_up; 
     else if (_hinput > 0) sprite_index = spr_player_walk_right;
     else if (_hinput < 0) sprite_index = spr_player_walk_left;    
+    
+    //update player direction
+    facing = point_direction(0, 0, _hinput, _vinput);
 } 
 //player is idle
 else {
@@ -50,3 +52,23 @@ else {
     else if (sprite_index == spr_player_walk_up) sprite_index = spr_player_idle_up;
     else if (sprite_index == spr_player_walk_down) sprite_index = spr_player_idle_down;           
 }
+
+
+//create attack animation
+if (keyboard_check_pressed(vk_space)) {
+    
+    if (facing == 270) { //adjustment to account for sprite origin being at bottom of sprite
+        var _attack_inst = instance_create_depth(x, y-7, depth, obj_attack);
+    } else if (facing == 90) {
+        var _attack_inst = instance_create_depth(x, y-5, depth, obj_attack);
+    } else  {
+        var _attack_inst = instance_create_depth(x, y, depth, obj_attack);
+    }
+    
+    //change angle to match the direction the player is facing
+    _attack_inst.image_angle = facing;
+    
+    _attack_inst.damage *= damage;
+}
+
+
