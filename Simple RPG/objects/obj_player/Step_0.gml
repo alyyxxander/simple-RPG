@@ -31,13 +31,13 @@ var _ymove = _vinput * move_speed;
 
 
 //movement and collision all in one function!! =D
-move_and_collide(_xmove, _ymove, tilemap, undefined, undefined, undefined, move_speed, move_speed);
+move_and_collide(_xmove, _ymove, tilemap, 2, undefined, undefined, move_speed, move_speed);
 
 
 
 //if player is moving
 if (_hinput != 0 || _vinput != 0) {
-    if (_vinput > 0) sprite_index = spr_player_walk_down; 
+    if      (_vinput > 0) sprite_index = spr_player_walk_down; 
     else if (_vinput < 0) sprite_index = spr_player_walk_up; 
     else if (_hinput > 0) sprite_index = spr_player_walk_right;
     else if (_hinput < 0) sprite_index = spr_player_walk_left;    
@@ -47,7 +47,7 @@ if (_hinput != 0 || _vinput != 0) {
 } 
 //player is idle
 else {
-    if (sprite_index == spr_player_walk_right) sprite_index = spr_player_idle_right;
+    if      (sprite_index == spr_player_walk_right) sprite_index = spr_player_idle_right;
     else if (sprite_index == spr_player_walk_left) sprite_index = spr_player_idle_left; 
     else if (sprite_index == spr_player_walk_up) sprite_index = spr_player_idle_up;
     else if (sprite_index == spr_player_walk_down) sprite_index = spr_player_idle_down;           
