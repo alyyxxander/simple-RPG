@@ -1,4 +1,3 @@
-
 move_speed = 1;
 tilemap = layer_tilemap_get_id("Tiles_Collision");
 
@@ -10,3 +9,22 @@ facing = 270;
 hp = 10;
 hp_max = hp;
 damage = 1;
+level = 1;
+xp = 0;
+xp_to_level_up = 100; //xp needed until level up
+
+
+//=============FUNCTIONS
+function add_xp(_xp_to_add) {
+    xp += _xp_to_add;
+    if  (xp >= xp_to_level_up) {
+        level++;
+        xp -= xp_to_level_up;
+        xp_to_level_up *= 1.4; //increase xp needed for every level
+        
+        hp_max  += 5;
+        hp =  hp_max;
+        damage += 0.8;
+    }
+}
+

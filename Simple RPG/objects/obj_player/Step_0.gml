@@ -34,7 +34,6 @@ var _ymove = _vinput * move_speed;
 move_and_collide(_xmove, _ymove, tilemap, 2, undefined, undefined, move_speed, move_speed);
 
 
-
 //if player is moving
 if (_hinput != 0 || _vinput != 0) {
     if      (_vinput > 0) sprite_index = spr_player_walk_down; 
@@ -56,13 +55,14 @@ else {
 
 //create attack animation
 if (keyboard_check_pressed(vk_space)) {
+    var _attack_inst;
     
     if (facing == 270) { //adjustment to account for sprite origin being at bottom of sprite
-        var _attack_inst = instance_create_depth(x, y-7, depth, obj_attack);
+        _attack_inst = instance_create_depth(x, y-7, depth, obj_attack);
     } else if (facing == 90) {
-        var _attack_inst = instance_create_depth(x, y-5, depth, obj_attack);
+        _attack_inst = instance_create_depth(x, y-5, depth, obj_attack);
     } else  {
-        var _attack_inst = instance_create_depth(x, y, depth, obj_attack);
+        _attack_inst = instance_create_depth(x, y, depth, obj_attack);
     }
     
     //change angle to match the direction the player is facing
