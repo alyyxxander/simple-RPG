@@ -1,3 +1,7 @@
+//if dialogue box is up, dont run anything below so that
+//the enemy wont be able to move
+if (instance_exists(obj_dialogue)) exit;
+    
 if  (alarm[1] >= 0) { //if alarm is active
     target_x = x + knockback_x;
     target_y = y + knockback_y;

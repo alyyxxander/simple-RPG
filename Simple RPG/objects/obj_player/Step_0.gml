@@ -1,3 +1,8 @@
+//if dialogue box is up, dont run anything below so that
+//the player wont be able to move
+if (instance_exists(obj_dialogue)) exit;
+
+
 //this = 1 when D is pressed, and = -1 when A is pressed
 //its set up this way, because to move to the right, you need to add +1 to 
 //the x coord, and subtract -1 from the x coord to move left
