@@ -2,7 +2,6 @@ function create_dialogue(_messages) {
     //dont do anything if dialogue already exists
     if (instance_exists(obj_dialogue)) return; 
          
-    
     var _inst  = instance_create_depth(0, 0, 0, obj_dialogue);
     _inst.messages = _messages;
     _inst.current_message = 0;
@@ -16,25 +15,26 @@ character_colors = {
     "Other Guy": c_olive
 };
 
+character_portraits  = {
+    "Pink Girl": spr_portrait_pink,
+    "PlayerName": spr_portrait_player, 
+    "Other Guy": spr_portrait_other,
+};
 
 
-
-other_dialogue = [
+other_guy_dialogue_1 = [
 {
-    name: "Pink Girl",
-    msg: "Hello!"
+    name: "Other Guy",
+    msg: "This is jusst aa demo. I dont haave aanything clever to say."
+},{
+    name: "PlayerName",
+    msg: "Your speech has a lot of typos."
 },{
     name: "Other Guy",
-    msg: "More text here!!"
-},{
-    name: "Pink Girl",
-    msg: "Bing bong"
-},{
-    name: "Pink Girl",
-    msg: "This is the 4th message"
+    msg: "Wow, you didnt need to call me out liiike thaat."
 },{
     name: "Other Guy",
-    msg: "5th message....."
+    msg: "Dick."
 }
 ];
 
