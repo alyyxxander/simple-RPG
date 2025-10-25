@@ -15,8 +15,8 @@ level = 1;
 xp = 0;
 xp_to_level_up = 100; //xp needed until level up
 
-enemies_remaining  = instance_number(obj_enemy1) + instance_number(obj_skeleton) + instance_number(obj_demon);
-
+enemies_remaining = 0;;
+go_to_next_room = false;
 
 //=============FUNCTIONS
 function add_xp(_xp_to_add) {
