@@ -1,3 +1,6 @@
+enemies_remaining  = instance_number(obj_enemy1) + instance_number(obj_skeleton) + instance_number(obj_demon);
+
+
 //if dialogue box is up, dont run anything below so that
 //the player wont be able to move
 if (instance_exists(obj_dialogue)) exit;

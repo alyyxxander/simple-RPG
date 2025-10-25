@@ -21,7 +21,6 @@ character_portraits  = {
     "Other Guy": spr_portrait_other,
 };
 
-
 other_guy_dialogue_1 = [
 {
     name: "Other Guy",
@@ -37,7 +36,6 @@ other_guy_dialogue_1 = [
     msg: "Dick."
 }
 ];
-
 
 welcome_dialogue = [
 {
@@ -63,3 +61,5 @@ welcome_dialogue = [
     msg: "Yeaahhhhh.... Okay bye!"
 }
 ];
+
+

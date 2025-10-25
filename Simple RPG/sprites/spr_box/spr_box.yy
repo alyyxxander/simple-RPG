@@ -45,8 +45,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Meta",
+    "path":"folders/Sprites/Meta.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

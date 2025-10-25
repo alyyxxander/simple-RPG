@@ -1,6 +1,8 @@
 move_speed = 1;
 tilemap = layer_tilemap_get_id("Tiles_Collision");
 
+
+
 //direction the player is currently facing
 //right=0, up=90, left=180, down=270
 facing = 270;
@@ -12,6 +14,8 @@ damage = 1;
 level = 1;
 xp = 0;
 xp_to_level_up = 100; //xp needed until level up
+
+enemies_remaining  = instance_number(obj_enemy1) + instance_number(obj_skeleton) + instance_number(obj_demon);
 
 
 //=============FUNCTIONS

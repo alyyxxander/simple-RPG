@@ -1,5 +1,6 @@
 ///@description when player is within talking range, show icon above NPC
 
+draw_shadow(1);
 draw_self();
 
 if (player_is_close && !instance_exists(obj_dialogue)) {
