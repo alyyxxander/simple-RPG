@@ -18,7 +18,11 @@ var _vinput = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 var _xmove = _hinput * move_speed;
 var _ymove = _vinput * move_speed;
 
-
+//these  lines stop the player from moving faster diagonally
+var _vector_length = (_hinput!=0 || _vinput!=0);
+var _dir = point_direction(0, 0, _hinput, _vinput); //create vector in direction of desired movement
+_hinput = lengthdir_x(_vector_length, _dir); //calculate x component of vector
+_vinput = lengthdir_y(_vector_length, _dir); //calculate y component of vector
 
 #region Nudge adjustment to prevent getting stuck
 // --- Nudge adjustment to prevent getting stuck (Before movement) ---

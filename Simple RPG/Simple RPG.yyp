@@ -46,6 +46,7 @@
     {"id":{"name":"log","path":"notes/log/log.yy",},},
     {"id":{"name":"ReadMe","path":"notes/ReadMe/ReadMe.yy",},},
     {"id":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},},
+    {"id":{"name":"obj_carry_data","path":"objects/obj_carry_data/obj_carry_data.yy",},},
     {"id":{"name":"obj_demon","path":"objects/obj_demon/obj_demon.yy",},},
     {"id":{"name":"obj_dialogue","path":"objects/obj_dialogue/obj_dialogue.yy",},},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},

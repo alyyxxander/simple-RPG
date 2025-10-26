@@ -8,4 +8,7 @@
 10/21/25: started 4th video: Dialogue Boxes
 10/22/25: worked more on 4th video, added portraits!
 10/23/25: finished 4th video
-10/24/25: started 5th video: Finishing the Game
+10/24/25: started and finished 5th video: Finishing the Game. Didn't do publishing part of tutorial
+          Also changed level to change when player killed all enemies
+10/25/25: started and finished 6th video: GFixing Bugs. Didn't do last part of video where
+          they adjusted the camera bc i wasnt having problems with the camera
