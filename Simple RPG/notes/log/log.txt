@@ -12,3 +12,24 @@
           Also changed level to change when player killed all enemies
 10/25/25: started and finished 6th video: GFixing Bugs. Didn't do last part of video where
           they adjusted the camera bc i wasnt having problems with the camera
+
+
+================================TODO
+[X] portraits
+[X] enemy counter
+[ ] pause screen
+[ ] lives
+[ ] enter player name
+
+
+==============================what i would do diffferently nnext time
+put tops of walls on another layer thats above instances layer, since player and
+enemy sprites can sometimes go above the tops of the walls
+
+
+================================BUGS
+if the player runs upwards against a wall, stops, and then runs up again, 
+the player is pushed up by one more pixel for some reason. since they were 
+pushed up by a pixel, they are now colliding with the wall and cannot move 
+left or right. moving  down first resolves this
+

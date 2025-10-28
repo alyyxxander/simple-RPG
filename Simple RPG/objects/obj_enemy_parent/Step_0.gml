@@ -1,6 +1,6 @@
-//if dialogue box is up, dont run anything below so that
-//the enemy wont be able to move
-if (instance_exists(obj_dialogue)) exit;
+//if dialogue box is up or if game is paused, dont run anything 
+//below so that the enemy wont be able to move
+if (instance_exists(obj_dialogue) || global.game_paused) exit;
     
 if  (alarm[1] >= 0) { //if alarm is active
     target_x = x + knockback_x;

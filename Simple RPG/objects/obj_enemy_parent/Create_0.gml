@@ -7,8 +7,8 @@ alarm[0] = 60;
 knockback_x = 0;
 knockback_y = 0;
 
-_old_x = x;
-_old_y = y;
+//_old_x = x;
+//_old_y = y;
 
 moving_left = false;
 moving_right  = true;

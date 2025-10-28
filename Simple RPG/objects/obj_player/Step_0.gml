@@ -1,3 +1,5 @@
+if (global.game_paused) exit;
+
 enemies_remaining  = instance_number(obj_enemy1) + instance_number(obj_skeleton) + instance_number(obj_demon);
 if (enemies_remaining == 0) room_goto_next();
 

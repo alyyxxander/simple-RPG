@@ -11,9 +11,10 @@ draw_sprite_stretched(spr_box, 0, _dx, _dy, _box_width, _box_height);
 
 //=====================DISPLAY NAME
 //where the name will be drawn
-_dx += 16;
-_dy += 16;
+_dx += 30;
+_dy += 40;
 draw_set_font(Font1);
+draw_set_halign(fa_left);
 var _name = messages[current_message].name;
 draw_set_color(global.character_colors[$ _name]);
 draw_text(_dx, _dy, _name);
