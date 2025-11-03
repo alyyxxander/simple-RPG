@@ -12,7 +12,7 @@ draw_sprite_stretched(spr_box, 0, _dx, _dy, _box_width, _box_height);
 //=====================DISPLAY NAME
 //where the name will be drawn
 _dx += 30;
-_dy += 40;
+_dy += 30;
 draw_set_font(Font1);
 draw_set_halign(fa_left);
 var _name = messages[current_message].name;
@@ -23,7 +23,8 @@ draw_set_color(c_white);  //reset text color
 
 
 //===================DRAWING MESSAGE
-_dy += 40; //draw text 40 pixels below the name
+_dy += 20; //draw text 40 pixels below the name
+draw_set_valign(fa_top);
 
 //draw_text_ext() lets you set a max width the text will go before
 //wrapping to the next line

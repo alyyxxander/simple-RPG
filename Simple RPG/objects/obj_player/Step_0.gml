@@ -1,12 +1,17 @@
+
 if (global.game_paused) exit;
 
-enemies_remaining  = instance_number(obj_enemy1) + instance_number(obj_skeleton) + instance_number(obj_demon);
+//enemies_remaining  = instance_number(obj_enemy1) + instance_number(obj_skeleton) + instance_number(obj_demon);
+enemies_remaining = instance_number(obj_enemy_parent);
 if (enemies_remaining == 0) room_goto_next();
 
 
 //if dialogue box is up, dont run anything below so that
 //the player wont be able to move
-if (instance_exists(obj_dialogue)) exit;
+if (instance_exists(obj_dialogue)) {
+    sprite_index = spr_player_idle_down;
+    exit;
+}
 
 
 //this = 1 when D is pressed, and = -1 when A is pressed
@@ -19,6 +24,7 @@ var _vinput = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
 var _xmove = _hinput * move_speed;
 var _ymove = _vinput * move_speed;
+
 
 //these  lines stop the player from moving faster diagonally
 var _vector_length = (_hinput!=0 || _vinput!=0);
@@ -80,9 +86,7 @@ if (keyboard_check_pressed(vk_space)) {
         _attack_inst = instance_create_depth(x, y, depth, obj_attack);
     }
     
-    //change angle to match the direction the player is facing
-    _attack_inst.image_angle = facing;
-    
+    _attack_inst.image_angle = facing; //change angle to match the direction the player is facing
     _attack_inst.damage *= damage;
 }
 

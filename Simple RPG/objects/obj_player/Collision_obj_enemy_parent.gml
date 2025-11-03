@@ -4,6 +4,11 @@ if(alarm[0] < 0) {
     image_blend = c_red;
     
     if (hp <= 0) {
-        room_restart();
+        global.lives_remaining--;
+        if (global.lives_remaining ==0) room_goto(rm_restart);
+        else {
+            hp = hp_max; //reset health
+            room_restart();
+        }
     }
 }

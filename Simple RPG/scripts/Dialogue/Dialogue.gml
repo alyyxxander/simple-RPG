@@ -12,7 +12,7 @@ character_colors = {
     "Congrats!": c_yellow,
     "Pink Girl": c_fuchsia,
     "PlayerName": c_aqua,
-    "Other Guy": c_olive
+    "Other Guy": c_lime
 };
 
 character_portraits  = {
