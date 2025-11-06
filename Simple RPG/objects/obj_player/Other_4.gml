@@ -5,6 +5,7 @@ with (obj_carry_data) {
     other.xp_to_level_up = xp_to_level_up;
     other.hp = hp;
     other.hp_max = hp_max;
+    other.lives_remaining = lives_remaining
     
     //we no longer need this instance of obj_carry_data once 
     //all of the info has been transferred back to the player

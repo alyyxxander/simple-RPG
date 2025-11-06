@@ -1,14 +1,14 @@
 target_x  = x;
 target_y = y;
-tilemap =  layer_tilemap_get_id("Tiles_Collision");
+collision_things = [layer_tilemap_get_id("Tiles_Walls"), layer_tilemap_get_id("Tiles_Wall_Tops"), obj_enemy_parent];
 alarm[0] = 60;
 
 //knockback (how much the enemy is moving while alarm[1] is active)
 knockback_x = 0;
 knockback_y = 0;
 
-//_old_x = x;
-//_old_y = y;
+_old_x = x;
+_old_y = y;
 
 moving_left = false;
 moving_right  = true;

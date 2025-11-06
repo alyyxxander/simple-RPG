@@ -6,5 +6,8 @@
 
 //with(all) means it'll loop through all instances in the room
 with (all) {
-    depth  = -bbox_bottom;
+    depth = -bbox_bottom;
 }
+
+
+//show_debug_message("player depth: " + string(depth));

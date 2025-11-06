@@ -1,8 +1,8 @@
 //every few seconds, the enemy will choose a new coord to travel to,
 //depending on their distance to the player
 
-_old_x = x; // store current x for direction check later
-_old_y = y;
+//_old_x = x; // store current x for direction check later
+//_old_y = y;
 
 //if enemy is close enough, follow the player
 if (instance_exists(obj_player) && distance_to_object(obj_player) < distance_before_follow) {
@@ -26,11 +26,8 @@ if (target_x < _old_x) {
     moving_right = false;
 }
 
-if (moving_left) {
-    sprite_index = moving_left_spr;
-} else {
-    sprite_index = moving_right_spr;
-}
+if (moving_left) sprite_index = moving_left_spr;
+else sprite_index = moving_right_spr;
 
 //we want this to run again in 1-3 seconds
 alarm[0] = random_range(60,180);

@@ -49,7 +49,7 @@ draw_sprite_stretched(spr_xp, 1, dx, _XP_dy, _xp_bar_width, statbar_height);
 var _hearts_dy = _XP_dy + margin + sprite_get_height(spr_heart);
 draw_sprite(spr_heart, 1, dx, _hearts_dy);
 
-for (var i = 0; i<global.lives_remaining-1; i++) { 
+for (var i = 0; i<obj_player.lives_remaining-1; i++) { 
     dx += sprite_get_width(spr_heart) + margin;
     draw_sprite(spr_heart, 1, dx, _hearts_dy);   
 }
@@ -68,7 +68,6 @@ surface_reset_target();
 // This makes everything drawn above look crisp and pixel-perfect.
 draw_surface_stretched(ui_surface, 0, 0, gui_width, gui_height);
 
-
 dx = 8;
 
 // We add the "_statbar_width/2" to center the text
@@ -84,10 +83,7 @@ draw_text((dx+statbar_width/2)*_scale, (_XP_dy+statbar_height/2)*_scale, $"LEVEL
 
 
 
-
 //=====================ENEMIES LEFT
 dx = gui_width - (gui_width/10);
 dy = 48;
 draw_text_transformed(dx, dy, obj_player.enemies_remaining, 1, 1, 0);
-
-

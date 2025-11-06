@@ -1,7 +1,7 @@
 
 if (global.game_paused) exit;
 
-//enemies_remaining  = instance_number(obj_enemy1) + instance_number(obj_skeleton) + instance_number(obj_demon);
+//update enemy counter
 enemies_remaining = instance_number(obj_enemy_parent);
 if (enemies_remaining == 0) room_goto_next();
 
@@ -26,34 +26,15 @@ var _xmove = _hinput * move_speed;
 var _ymove = _vinput * move_speed;
 
 
-//these  lines stop the player from moving faster diagonally
+//these lines stop the player from moving faster diagonally
 var _vector_length = (_hinput!=0 || _vinput!=0);
 var _dir = point_direction(0, 0, _hinput, _vinput); //create vector in direction of desired movement
 _hinput = lengthdir_x(_vector_length, _dir); //calculate x component of vector
 _vinput = lengthdir_y(_vector_length, _dir); //calculate y component of vector
 
-#region Nudge adjustment to prevent getting stuck
-// --- Nudge adjustment to prevent getting stuck (Before movement) ---
-
-// We use place_meeting() to check for collision at the current position (x, y).
-// The third argument is the Tilemap ID, which is a valid target for place_meeting.
-//if (place_meeting(x, y, tilemap)) {
-    // The instance is currently stuck *inside* the tilemap collision boundary.
-    
-    // Nudge ONLY if the player is NOT trying to move down, 
-    // which prevents the push from interfering with downward movement.
-//    if (_vinput >= 0) {
-        // Move the player's position down by 1 pixel to pull them out of the collision
-//        y += 1; 
-//    }
-//}
-#endregion
-
-
 
 //movement and collision all in one function!! =D
-move_and_collide(_xmove, _ymove, tilemap, 2, undefined, undefined, move_speed, move_speed);
-
+move_and_collide(_xmove, _ymove, collision_tilemaps, 2, undefined, undefined, move_speed, move_speed);
 
 //if player is moving
 if (_hinput != 0 || _vinput != 0) {

@@ -1,6 +1,5 @@
 move_speed = 1;
-tilemap = layer_tilemap_get_id("Tiles_Collision");
-
+collision_tilemaps = [layer_tilemap_get_id("Tiles_Walls"), layer_tilemap_get_id("Tiles_Wall_Tops")];
 
 
 //direction the player is currently facing
@@ -14,9 +13,12 @@ damage = 1;
 level = 1;
 xp = 0;
 xp_to_level_up = 100; //xp needed until level up
+max_lives = 3;
+lives_remaining = max_lives;
 
-enemies_remaining = 0;;
+enemies_remaining = 0;
 go_to_next_room = false;
+
 
 //=============FUNCTIONS
 function add_xp(_xp_to_add) {
